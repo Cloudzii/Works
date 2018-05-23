@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+  <th:block th:fragment="site-menu(logoImage, enrollImage, callImage)">
+    <h1 class="logo"><a class="logo-link" href="#" th:href="@{/}"><img src="/images/logo.png" th:src="${logoImage}" alt="빌리브 로고" /></a></h1>
+    <div class="menu">
+      <div class="menu-item menu1">
+        <a href="#" th:href="@{/site-info}">공급안내</a>
+        <div class="sub-menu">
+          <a href="#" th:href="@{/site-info}" class="sub-menu-item menu1-1"></a>
+          <a href="#" th:href="@{/site-schedule}" class="sub-menu-item menu1-2"></a>
+          <a href="#" th:href="@{/site-subscribe}" class="sub-menu-item menu1-3"></a>
+          <a href="#" th:href="@{/site-contract}" class="sub-menu-item menu1-4"></a>
+          <a href="#" th:href="@{/rental-cost}" class="sub-menu-item menu1-5"></a>
+          <a href="#" th:href="@{/residence-notice}" class="sub-menu-item menu1-6"></a>
+        </div>
+      </div>
+      <div class="menu-item menu2">
+        <a href="#" th:href="@{/apt-info}">상품안내</a>
+        <div class="sub-menu">
+          <a href="#" th:href="@{/apt-info}" class="sub-menu-item menu2-1"></a>
+          <a href="#" th:href="@{/apt-community}" class="sub-menu-item menu2-2"></a>
+          <a href="#" th:href="@{/apt-space}" class="sub-menu-item menu2-3"></a>
+          <a href="#" th:href="@{/apt-preview}" class="sub-menu-item menu2-4"></a>
+        </div>
+      </div>
+      <div class="menu-item menu3">
+        <a href="#" th:href="@{/brand}">울산프리미엄</a>
+        <div class="sub-menu">
+          <a href="#" th:href="@{/brand}" class="sub-menu-item menu3-1"></a>
+          <a href="#" th:href="@{/ulsan-environment}" class="sub-menu-item menu3-2"></a>
+          <a href="#" th:href="@{/ssg-life-service}" class="sub-menu-item menu3-3"></a>
+          <a href="#" th:href="@{/public-apt}" class="sub-menu-item menu3-4"></a>
+        </div>
+      </div>
+      <div class="menu-item menu4">
+        <a href="#" th:href="@{/pr-media}">홍보센터</a>
+        <div class="sub-menu">
+          <a href="#" class="sub-menu-item menu4-1"></a>
+          <a href="#" th:href="@{/pr-media}" class="sub-menu-item menu4-2"></a>
+          <a href="#" th:href="@{/pr-press}" class="sub-menu-item menu4-3"></a>
+          <a href="#" th:href="@{/event}" class="sub-menu-item menu4-4"></a>
+        </div>
+      </div>
+      <div class="menu-item menu5 disabled">
+        <a href="#">빌리브피플</a>
+      </div>
+    </div>
+    <div class="btn-enroll">
+      <a href="javascript:;"><img src="/images/btn-enroll-hover.png" th:src="${enrollImage}" alt="관심고객 등록하기" />관심고객 등록하기</a>
+      <img class="call-number" src="/images/btn-call-number.png" th:src="${callImage}" alt="1800-8113" />
+    </div>
+  </th:block>
+</body>
+</html>
